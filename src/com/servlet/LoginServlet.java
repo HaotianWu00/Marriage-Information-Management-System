@@ -39,7 +39,7 @@ public class LoginServlet extends HttpServlet {  //需要继承HttpServlet  并�
 
 			request.getRequestDispatcher("/page/indexcustomer.jsp").forward(request, response);//转发到成功页面
 		}else{
-			response.sendRedirect("/index.jsp"); //重定向到首页
+			response.sendRedirect("index.jsp"); //重定向到首页
 		}
 	}
 }

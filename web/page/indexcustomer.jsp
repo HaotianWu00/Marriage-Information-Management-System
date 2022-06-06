@@ -30,10 +30,9 @@
         
         <ul class="layui-nav right" lay-filter="">
           <li class="layui-nav-item">
-            <a href="javascript:;">尊敬的：${sessionScope.user_session.name }</a>
+            <a href="javascript:;">尊敬的：${sessionScope.name }</a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
-              <dd><a onclick="x_admin_show('个人信息','${ctx }/employee/add?id=${sessionScope.user_session.id }')">个人信息</a></dd>
-              <dd><a onclick="x_admin_show('切换帐号','${ctx}/user/logout" >切换帐号</a></dd>
+              <dd><a onclick="x_admin_show('个人信息','${ctx }/page/user/information.jsp')">个人信息</a></dd>
               <dd><a href="${ctx}/page/loginForm.jsp">退出</a></dd>
             </dl>
           </li>

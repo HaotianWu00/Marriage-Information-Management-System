@@ -64,15 +64,22 @@ public class UserDaoImpl implements UserDao{
 		return null;
 	}
 
-	public boolean update(int id,String name, String pwd,String sex, String home,String info) {
+	public boolean update(String uname, String pswd,String phonenum, String email,String name, String sex,String age, String height,String idnum, String salary, String address) {
 		boolean flag = false;
 		DBconn.init();
-		String sql ="update user set name ='"+name
-				+"' , pwd ='"+pwd
-				+"' , sex ='"+sex
-				+"' , home ='"+home
-				+"' , info ='"+info+"' where id = "+id;
+		String sql ="update user set pswd ='"+ pswd
+				+"' , PhoneNum ='"+ phonenum
+				+"' , Email ='"+ email
+				+"' , Name ='"+ name
+				+"' , sex ='"+ sex
+				+"' , age ='"+ age
+				+"' , height ='"+ height
+				+"' , idNum ='"+ idnum
+				+"' , salary ='"+ salary
+				+"' , address ='"+ address +"' where UName = "+ "'" + uname + "'";
+		System.out.println(sql);
 		int i =DBconn.addUpdDel(sql);
+		System.out.println(i);
 		if(i>0){
 			flag = true;
 		}

@@ -10,7 +10,7 @@ public interface UserDao {
 	 boolean register(User user);//注册
 	 List<User> getUserAll();//返回用户信息集合
 	 boolean delete(int id) ;//根据id删除用户
-	 boolean update(int id,String name, String pwd,String sex, String home,String info) ;//更新用户信息
+	 boolean update(String uname, String pswd,String phonenum, String email,String name, String sex,String age, String height,String idnum, String salary, String address) ;//更新用户信息
 	 int count();
 	boolean queryUserByName(String name);
 }
