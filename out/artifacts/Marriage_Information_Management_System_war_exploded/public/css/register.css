@@ -1,0 +1,86 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.clearfix::after,clearfix::before{
+    content: '';
+    display: table;
+    clear: both;
+}
+div.register-uper{
+
+    height: 200px;
+    width: 100%;
+}
+div.register-uperleft{
+    background: url(../image/1.jpg);
+    margin-top: 0.5%;
+    margin-left: 0.5%;
+    background-size: 100% 100%;
+    float: left;
+    height: 60%;
+    width: 17%;
+
+}
+div.register-uperright{
+    float: right;
+    margin-right: 2%;
+    margin-top: 1%;
+    height: 60%;
+    width: 30%;
+    font-size: 130%;
+    text-align: right;
+}
+div.register-bottom{
+    float: left;
+    width: 100%;
+    height: 40%;
+    font-size: 180%;
+    text-align: center;
+    vertical-align: bottom;
+    line-height: 20px;
+}
+div.register-form{
+    width: 100%;
+    height: 450px;
+    background-color:  #C4C4C4;
+
+}
+div#box{
+    background-color: #F283AF;
+    float: left;
+    margin-top: 10px;
+    margin-left: 25%;
+    height: 400px;
+    width: 50%;
+}
+div.outer-box{
+    height: 10%;
+    margin-bottom: 10px;
+    margin-left: 25%;
+    width: 50%;
+    float: left;
+    font-size: 130%;
+    line-height: 50px;
+    vertical-align: middle;
+
+}
+input{
+    width: 60%;
+    height: 80%;
+    float: left;
+    border-radius: 5px;
+}
+label{
+    width: 40%;
+    height: 100%;
+    float: left;
+    text-align: right;
+}
+
+input.button{
+    float: bottom;
+    width: 20%;
+    margin-left: 40%;
+    height: 30px;
+}

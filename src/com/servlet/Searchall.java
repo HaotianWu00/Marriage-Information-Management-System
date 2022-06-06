@@ -26,6 +26,6 @@ public class Searchall extends HttpServlet{
 		int count = ud.count();
 		request.setAttribute("userAll", userAll);
 		request.setAttribute("count", count);
-		request.getRequestDispatcher("/showall.jsp").forward(request, response);
+		request.getRequestDispatcher("/index.jsp").forward(request, response);
 	}
 }

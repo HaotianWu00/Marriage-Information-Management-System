@@ -8,13 +8,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import com.entity.User;
 
 public class UserDaoImpl implements UserDao{
 	
 	public boolean register(User user) {
 		boolean flag = false;
 		DBconn.init();
-		int i =DBconn.addUpdDel("insert into user(name,pwd,sex,home,info) " + "values('"+user.getName()+"','"+user.getPwd()+"','"+user.getSex()+"','"+user.getHome()+"','"+user.getInfo()+"')");
+		int i =DBconn.addUpdDel("insert into user (UName,pswd,PhoneNum,Email,Name,sex,age,height,idNum,salary,address) " + "values ('"+user.getUname()+"','"+user.getPswd()+"','"+user.getPhonenum()+"','"+user.getEmail()+"','" + user.getName()+"','"+user.getSex()+"','"+user.getAge()+"','"+user.getHeight()+"','" + user.getIdnum()+"','"+user.getSalary()+"','"+user.getAddress()+"')");
 		if(i>0){
 			flag = true;
 		}
@@ -22,35 +23,37 @@ public class UserDaoImpl implements UserDao{
 		return flag;
 	}
 
-    public boolean login(String name, String pwd) {
-		boolean flag = false;
+
+    public User login(String name, String pwd) {
+		User res = new User(null, null, null, null, null, null , null, null, null, null, null);
 		try {
 			    DBconn.init();
-				ResultSet rs = DBconn.selectSql("select * from user where name='"+name+"' and pwd='"+pwd+"'");
+				ResultSet rs = DBconn.selectSql("select * from user where uname='"+name+"' and pswd='"+pwd+"'");
 				while(rs.next()){
-					if(rs.getString("name").equals(name) && rs.getString("pwd").equals(pwd)){
-						flag = true;
+					if(rs.getString("uname").equals(name) && rs.getString("pswd").equals(pwd)){
+						res = new User( rs.getString("UName"), rs.getString("pswd"),
+								rs.getString("PhoneNum"), rs.getString("Email"), rs.getString("Name"),
+								rs.getString("sex"), rs.getString("age"), rs.getString("height"),
+								rs.getString("idNum"), rs.getString("salary"), rs.getString("address"));
 					}
 				}
 				DBconn.closeConn();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return flag;
+		return res;
 	}
+
 	public List<User> getUserAll() {
 		List<User> list = new ArrayList<User>();
     	try {
 		    DBconn.init();
 			ResultSet rs = DBconn.selectSql("select * from user");
 			while(rs.next()){
-				User user = new User();
-				user.setId(rs.getInt("id"));
-				user.setName(rs.getString("name"));
-				user.setPwd(rs.getString("pwd"));
-				user.setSex(rs.getString("sex"));
-				user.setHome(rs.getString("home"));
-				user.setInfo(rs.getString("info"));
+				User user = new User( rs.getString("UName"), rs.getString("pswd"),
+						rs.getString("PhoneNum"), rs.getString("Email"), rs.getString("Name"),
+						rs.getString("sex"), rs.getString("age"), rs.getString("height"),
+						rs.getString("idNum"), rs.getString("salary"), rs.getString("address"));
 				list.add(user);
 			}
 			DBconn.closeConn();
@@ -60,6 +63,7 @@ public class UserDaoImpl implements UserDao{
 		}
 		return null;
 	}
+
 	public boolean update(int id,String name, String pwd,String sex, String home,String info) {
 		boolean flag = false;
 		DBconn.init();
