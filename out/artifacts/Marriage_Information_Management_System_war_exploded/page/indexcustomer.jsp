@@ -33,7 +33,7 @@
             <a href="javascript:;">尊敬的：${sessionScope.name }</a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
               <dd><a onclick="x_admin_show('个人信息','${ctx }/page/user/information.jsp')">个人信息</a></dd>
-              <dd><a href="${ctx}/page/loginForm.jsp">退出</a></dd>
+              <dd><a href="${ctx}/index.jsp">退出</a></dd>
             </dl>
           </li>
           <li class="layui-nav-item to-index"><a>欢迎登录</a></li>
@@ -55,7 +55,7 @@
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="${ctx }/page/dept/list">
+                        <a _href="${ctx }/page/query/query.jsp">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>部门列表</cite>
                         </a>
@@ -148,7 +148,7 @@
           </ul>
           <div class="layui-tab-content">
             <div class="layui-tab-item layui-show">
-                <iframe src='${ctx}/mall/product' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
+                <iframe src='${ctx}/page/register3.jsp' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
             </div>
           </div>
         </div>

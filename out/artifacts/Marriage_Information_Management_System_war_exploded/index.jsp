@@ -44,7 +44,7 @@
 			<div class="message">龙爱婚恋网</div>
 			${requestScope.message}
 			<form method="post" class="layui-form" action="${ctx}/LoginServlet">
-				<input name="name" placeholder="用户名" value="${loginname }"  type="text" lay-verify="required" class="layui-input" >
+				<input name="name" placeholder="用户名" value="${loginname }" type="text" lay-verify="required" class="layui-input" autocomplete="off" >
 
 				<input name="pwd" lay-verify="required" placeholder="密码"  type="password" class="layui-input">
 

@@ -57,31 +57,31 @@
             <br>
             <div class="outer-box">
                 <label for="exampleFormControlInput1">姓名:&nbsp&nbsp&nbsp</label>
-                <input class="form-control username" name="name" id="exampleFormControlInput1" >
+                <input class="form-control username" name="name" id="exampleFormControlInput1" autocomplete="off" >
             </div>
             <div class="outer-box">
                 <label for="exampleFormControlInput2">性别:&nbsp&nbsp&nbsp</label>
-                <input class="form-control username" name="sex" id="exampleFormControlInput2" >
+                <input class="form-control username" name="sex" id="exampleFormControlInput2" autocomplete="off" >
             </div>
             <div class="outer-box">
                 <label for="exampleFormControlInput3">年龄:&nbsp&nbsp&nbsp</label>
-                <input class="form-control username" name="age" id="exampleFormControlInput3" >
+                <input class="form-control username" name="age" id="exampleFormControlInput3" autocomplete="off" >
             </div>
             <div class="outer-box">
                 <label for="exampleFormControlInput4">身高:&nbsp&nbsp&nbsp</label>
-                <input class="form-control username" name="height" id="exampleFormControlInput4" >
+                <input class="form-control username" name="height" id="exampleFormControlInput4" autocomplete="off" >
             </div>
             <div class="outer-box">
                 <label for="exampleFormControlInput5">身份证号:&nbsp&nbsp&nbsp</label>
-                <input class="form-control username" name="idnum" id="exampleFormControlInput5" >
+                <input class="form-control username" name="idnum" id="exampleFormControlInput5" autocomplete="off">
             </div>
             <div class="outer-box">
                 <label for="exampleFormControlInput6">月薪:&nbsp&nbsp&nbsp</label>
-                <input class="form-control username" name="salary" id="exampleFormControlInput6" >
+                <input class="form-control username" name="salary" id="exampleFormControlInput6" autocomplete="off" >
             </div>
             <div class="outer-box">
                 <label for="exampleFormControlInput7">住址:&nbsp&nbsp&nbsp</label>
-                <input class="form-control username" name="address" id="exampleFormControlInput7" >
+                <input class="form-control username" name="address" id="exampleFormControlInput7" autocomplete="off" >
             </div>
             <input  class="button" type="submit" value="提交注册">
 

@@ -1,8 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-  <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-	<c:set var="ctx" value="${pageContext.request.contextPath}"/>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<! DOCTYPE html>
 <html>
   
   <head>
@@ -22,6 +21,16 @@
       <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
       <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+      <style>
+          div.query1, div.query2, div.query3, div.query4{
+              float: left;
+              margin-right: 3%;
+
+          }
+
+      </style>
+
   </head>
   
   <body>
@@ -37,11 +46,61 @@
     </div>
     <div class="x-body">
       <div class="layui-row" style="" align="center">
-        <form class="layui-form layui-col-md12 x-so" method="get" action="${ctx }/dept/list">
+        <form class="layui-form layui-col-md12 x-so" method="get" action="${ctx}/Searchall">
           <!-- <input class="layui-input" placeholder="开始日" name="start" id="start">
           <input class="layui-input" placeholder="截止日" name="end" id="end"> -->
-          <input type="text" name="content" style="width:50%;"  placeholder="请输入查找部门名称" autocomplete="off" class="layui-input">
-          <button class="layui-btn" style="background-color: #248cf5;" lay-submit="" lay-filter="sreach"><i class="layui-icon" style="background-color: #248cf5;">&#xe615;</i></button>
+            <div class="outer-query">
+                <div class="query1">
+                    <p >性别：
+                        <span class="c_right"><select name="sex">
+                                <option value="不限" selected>不限</option>
+                                <option value="男">男</option>
+                                <option value="女">女</option>
+                            </select><br></span></p>
+                </div>
+                <div class="query2">
+                    <p >年龄：
+                        <span class="c_right"><select name="age">
+                                <option value="不限" selected>不限</option>
+                                <option value="小于20">小于20</option>
+                                <option value="20到30">20~30</option>
+                                <option value="30到40">30~40</option>
+                                <option value="40到50">40~50</option>
+                                <option value="大于50">大于50</option>
+                            </select><br></span></p>
+                </div>
+                <div class="query3">
+                    <p >身高：
+                        <span class="c_right"><select name="height">
+                                <option value="不限" selected>不限</option>
+                                <option value="小于150">小于150</option>
+                                <option value="150到155">150~155</option>
+                                <option value="155到160">155~160</option>
+                                <option value="160到165">160~165</option>
+                                <option value="165到170">165~170</option>
+                                <option value="170到175">170~175</option>
+                                <option value="175到180">175~180</option>
+                                <option value="180到185">180~185</option>
+                                <option value="185到190">185~190</option>
+                                <option value="大于190">大于190</option>
+                        </select><br></span></p>
+                </div>
+                <div class="query4">
+                    <p >月薪：
+                        <span class="c_right"><select name="salary">
+                                <option value="不限" selected>不限</option>
+                                <option value="小于1500">小于1500</option>
+                                <option value="1500到4000">1500~4000</option>
+                                <option value="4000到7000">4000~7000</option>
+                                <option value="7000到10000">7000~10000</option>
+                                <option value="10000到30000">10000~30000</option>
+                                <option value="大于30000">大于30000</option>
+                            </select><br></span></p>
+                </div>
+                <button class="layui-btn" style="background-color: #248cf5;" lay-submit="" lay-filter="sreach"><i class="layui-icon" style="background-color: #248cf5;">&#xe615;</i></button>
+            </div>
+
+
         </form>
       </div>
       <%-- <xblock>
@@ -57,22 +116,33 @@
             <th>
               <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
             </th>
-            <th>ID</th>
-            <th>部门名称</th>
-            <th>详细信息</th>
+            <th>用户名</th>
+            <th>姓名</th>
+            <th>性别</th>
+              <th>年龄</th>
+              <th>身高</th>
+              <th>月薪</th>
+              <th>住址</th>
+              <th>邮箱</th>
+              <th>电话</th>
          <!-- <th>状态</th> -->
-            <th>操作</th>
+
         </thead>
         <tbody>
-        <c:forEach items="${requestScope.list}" var="dept" varStatus="stat">
+        <c:forEach items="${requestScope.userAll}" var="user" varStatus="stat">
      <tr>
             <td>
               <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
             </td>
-            <td>${dept.id}</td>
-            <td>${dept.name }</td>
-            <td>${dept.remark }</td>
-            
+            <td>${user.uname}</td>
+            <td>${user.name }</td>
+            <td>${user.sex }</td>
+         <td>${user.age }</td>
+         <td>${user.height }</td>
+         <td>${user.salary }</td>
+         <td>${user.address }</td>
+         <td>${user.email }</td>
+         <td>${user.phonenum }</td>
            <!--  <td class="td-status">
               <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td> -->
                <c:choose>

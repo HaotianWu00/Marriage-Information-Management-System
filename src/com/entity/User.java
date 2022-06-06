@@ -13,7 +13,7 @@ public class User {
 	final String idnum;
 	final String salary;
 	final String address;
-	public User(String uame, String pswd, String email, String phonenum, String name, String sex, String age, String height,
+	public User(String uame, String pswd, String phonenum, String email,String name, String sex, String age, String height,
 				String idnum, String salary, String address){
 		this.uame = uame;
 		this.pswd = pswd;

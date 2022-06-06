@@ -31,11 +31,11 @@
         </tr>
         <tr>
             <td>绑定邮箱：</td>
-            <td><input type="text" value="${sessionScope.phonenum}" name="email" ></td>
+            <td><input type="text" value="${sessionScope.email}" name="email" ></td>
         </tr>
         <tr>
             <td>绑定手机号码：</td>
-            <td><input type="text" value="${sessionScope.email}" name="phonenum" ></td>
+            <td><input type="text" value="${sessionScope.phonenum}" name="phonenum" ></td>
         </tr>
         <tr>
             <td>姓名：</td>

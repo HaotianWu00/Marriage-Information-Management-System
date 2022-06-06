@@ -44,11 +44,11 @@ public class UserDaoImpl implements UserDao{
 		return res;
 	}
 
-	public List<User> getUserAll() {
+	public List<User> getUserAll(String a) {
 		List<User> list = new ArrayList<User>();
     	try {
 		    DBconn.init();
-			ResultSet rs = DBconn.selectSql("select * from user");
+			ResultSet rs = DBconn.selectSql("select * from user Where" + a);
 			while(rs.next()){
 				User user = new User( rs.getString("UName"), rs.getString("pswd"),
 						rs.getString("PhoneNum"), rs.getString("Email"), rs.getString("Name"),

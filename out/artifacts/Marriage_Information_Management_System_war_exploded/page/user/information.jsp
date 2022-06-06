@@ -31,11 +31,11 @@
     </tr>
     <tr>
         <td>绑定邮箱：</td>
-        <td>${sessionScope.phonenum}</td>
+        <td>${sessionScope.email}</td>
     </tr>
     <tr>
          <td>绑定手机号码：</td>
-        <td>${sessionScope.email}</td>
+        <td>${sessionScope.phonenum}</td>
     </tr>
     <tr>
         <td>姓名：</td>

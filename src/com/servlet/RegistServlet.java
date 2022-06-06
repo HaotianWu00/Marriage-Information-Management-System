@@ -48,7 +48,7 @@ public class RegistServlet extends HttpServlet{
 		String salary = request.getParameter("salary");
 		String address = request.getParameter("address");
 		
-		User user = new User(uname, pswd, email, phonenum, name, sex, age, height, idnum, salary, address); //实例化一个对象，组装属性
+		User user = new User(uname, pswd, phonenum, email, name, sex, age, height, idnum, salary, address); //实例化一个对象，组装属性
 
 		
 		UserDao userDao = new UserDaoImpl();

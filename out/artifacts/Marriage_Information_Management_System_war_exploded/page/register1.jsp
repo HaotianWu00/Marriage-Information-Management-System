@@ -104,19 +104,19 @@
             <br><br><br><br>
             <div class="outer-box">
                 <label for="exampleFormControlInput1">用户名:&nbsp&nbsp&nbsp</label>
-                <input  class="form-control username" name="uname" id="exampleFormControlInput1" >
+                <input  class="form-control username" name="uname" id="exampleFormControlInput1" autocomplete="off" >
             </div>
             <div class="outer-box">
                 <label for="exampleFormControlInput2">密码:&nbsp&nbsp&nbsp</label>
-                <input  class="form-control username" name="pswd" id="exampleFormControlInput2" >
+                <input  class="form-control username" name="pswd" id="exampleFormControlInput2" autocomplete="off" >
             </div>
             <div class="outer-box">
                 <label for="exampleFormControlInput3">绑定邮箱:&nbsp&nbsp&nbsp</label>
-                <input type="email" class="form-control username" name="email" id="exampleFormControlInput3" >
+                <input type="email" class="form-control username" name="email" id="exampleFormControlInput3" autocomplete="off" >
             </div>
             <div class="outer-box">
                 <label for="exampleFormControlInput4">绑定手机:&nbsp&nbsp&nbsp</label>
-                <input  class="form-control username" name="phonenum" id="exampleFormControlInput4" >
+                <input  class="form-control username" name="phonenum" id="exampleFormControlInput4" autocomplete="off" >
             </div>
 
             <input  class="button" type="submit" value="提交注册" onclick="checkFields()">
