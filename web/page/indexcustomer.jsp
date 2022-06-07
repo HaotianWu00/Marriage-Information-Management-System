@@ -71,8 +71,8 @@
             </li>
             <li>
                 <a href="javascript:;">
-                    <i class="iconfont">&#xe723;</i>
-                    <cite>职位管理</cite>
+                    <i class="iconfont">&#59039;</i>
+                    <cite>龙爱邮箱</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
                 <ul class="sub-menu">
@@ -82,7 +82,18 @@
                             <cite>职位列表</cite>
                         </a>
                     </li >
-                    
+                    <li>
+                        <a _href="${ctx }/page/job/list">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>职位列表</cite>
+                        </a>
+                    </li >
+                    <li>
+                        <a _href="${ctx }/page/job/list">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>职位列表</cite>
+                        </a>
+                    </li >
                 </ul>
             </li>
            
@@ -154,7 +165,7 @@
           </ul>
           <div class="layui-tab-content">
             <div class="layui-tab-item layui-show">
-                <iframe src='${ctx}/page/register3.jsp' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
+                <iframe src='${ctx}/page/success.jsp' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
             </div>
           </div>
         </div>

@@ -27,43 +27,43 @@
         </tr>
         <tr>
             <td>密码：</td>
-            <td><input type="text" value="${sessionScope.pswd}" name="pswd" ></td>
+            <td><input type="text" value="${sessionScope.pswd}" name="pswd" autocomplete="off"></td>
         </tr>
         <tr>
             <td>绑定邮箱：</td>
-            <td><input type="text" value="${sessionScope.email}" name="email" ></td>
+            <td><input type="text" value="${sessionScope.email}" name="email" autocomplete="off"></td>
         </tr>
         <tr>
             <td>绑定手机号码：</td>
-            <td><input type="text" value="${sessionScope.phonenum}" name="phonenum" ></td>
+            <td><input type="text" value="${sessionScope.phonenum}" name="phonenum" autocomplete="off"></td>
         </tr>
         <tr>
             <td>姓名：</td>
-            <td><input type="text" value="${sessionScope.name}" name="name" ></td>
+            <td><input type="text" value="${sessionScope.name}" name="name" autocomplete="off"></td>
         </tr>
         <tr>
             <td>性别：</td>
-            <td><input type="text" value="${sessionScope.sex}" name="sex" ></td>
+            <td><input type="text" value="${sessionScope.sex}" name="sex" autocomplete="off"></td>
         </tr>
         <tr>
             <td>年龄：</td>
-            <td><input type="text" value="${sessionScope.age}" name="age" ></td>
+            <td><input type="text" value="${sessionScope.age}" name="age" autocomplete="off"></td>
         </tr>
         <tr>
             <td>身高：</td>
-            <td><input type="text" value="${sessionScope.height}" name="height" ></td>
+            <td><input type="text" value="${sessionScope.height}" name="height" autocomplete="off"></td>
         </tr>
         <tr>
             <td>身份证号：</td>
-            <td><input type="text" value="${sessionScope.idnum}" name="idnum" ></td>
+            <td><input type="text" value="${sessionScope.idnum}" name="idnum" autocomplete="off"></td>
         </tr>
         <tr>
             <td>月薪：</td>
-            <td><input type="text" value="${sessionScope.salary}" name="salary" ></td>
+            <td><input type="text" value="${sessionScope.salary}" name="salary" autocomplete="off"></td>
         </tr>
         <tr>
             <td>住址：</td>
-            <td><input type="text" value="${sessionScope.address}" name="address" ></td>
+            <td><input type="text" value="${sessionScope.address}" name="address" autocomplete="off"></td>
         </tr>
 
 
