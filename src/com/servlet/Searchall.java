@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 import java.io.IOException;
 import java.util.List;
 
@@ -16,7 +17,18 @@ import java.util.List;
 public class Searchall extends HttpServlet{
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		doPost(request, response);
+		String name = request.getParameter("name");
+		if(name.equals("")){
+			request.getRequestDispatcher("/page/query/queryByName.jsp").forward(request, response);
+		}else{
+			String res = " UName != '" + request.getSession().getAttribute("uname") + "'" + " and Name = '" + name + "'";
+			System.out.println(res);
+			UserDao ud = new UserDaoImpl();
+			List<User> userAll = ud.getUserAll(res);
+			request.setAttribute("userAll", userAll);
+			request.getRequestDispatcher("/page/query/queryByName.jsp").forward(request, response);
+		}
+
 	}
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -120,8 +132,9 @@ public class Searchall extends HttpServlet{
 		UserDao ud = new UserDaoImpl();
 		List<User> userAll = ud.getUserAll(res);
 		int count = userAll.size();
+		String queryRes = "搜索 性别：" + sex + "，  年龄：" + age + "，  身高：" + height + "，  月薪：" + salary + "，  共计" + count + "条结果";
 		request.setAttribute("userAll", userAll);
-		request.setAttribute("count", count);
+		request.setAttribute("queryRes", queryRes);
 		request.getRequestDispatcher("/page/query/query.jsp").forward(request, response);
 	}
 }

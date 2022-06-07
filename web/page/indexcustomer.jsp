@@ -49,7 +49,7 @@
          
             <li>
                 <a href="javascript:;">
-                    <i class="iconfont">&#xe723;</i>
+                    <i class="iconfont">&#59059;</i>
                     <cite>婚恋搜索</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
@@ -59,11 +59,13 @@
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>基本信息搜所</cite>
                         </a>
-                        <a _href="${ctx }/page/query/query.jsp">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>姓名搜所</cite>
-                        </a>
                     </li >
+                    <li>
+                        <a _href="${ctx }/page/query/queryByName.jsp">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>姓名搜索</cite>
+                        </a>
+                    </li>
                    
                 </ul>
             </li>
