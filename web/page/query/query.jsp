@@ -63,9 +63,9 @@
                         <span class="c_right"><select name="age">
                                 <option value="不限" selected>不限</option>
                                 <option value="小于20">小于20</option>
-                                <option value="20到30">20~30</option>
-                                <option value="30到40">30~40</option>
-                                <option value="40到50">40~50</option>
+                                <option value="20~30">20~30</option>
+                                <option value="30~40">30~40</option>
+                                <option value="40~50">40~50</option>
                                 <option value="大于50">大于50</option>
                             </select><br></span></p>
                 </div>
@@ -74,14 +74,14 @@
                         <span class="c_right"><select name="height">
                                 <option value="不限" selected>不限</option>
                                 <option value="小于150">小于150</option>
-                                <option value="150到155">150~155</option>
-                                <option value="155到160">155~160</option>
-                                <option value="160到165">160~165</option>
-                                <option value="165到170">165~170</option>
-                                <option value="170到175">170~175</option>
-                                <option value="175到180">175~180</option>
-                                <option value="180到185">180~185</option>
-                                <option value="185到190">185~190</option>
+                                <option value="150~155">150~155</option>
+                                <option value="155~160">155~160</option>
+                                <option value="160~165">160~165</option>
+                                <option value="165~170">165~170</option>
+                                <option value="170~175">170~175</option>
+                                <option value="175~180">175~180</option>
+                                <option value="180~185">180~185</option>
+                                <option value="185~190">185~190</option>
                                 <option value="大于190">大于190</option>
                         </select><br></span></p>
                 </div>
@@ -90,10 +90,10 @@
                         <span class="c_right"><select name="salary">
                                 <option value="不限" selected>不限</option>
                                 <option value="小于1500">小于1500</option>
-                                <option value="1500到4000">1500~4000</option>
-                                <option value="4000到7000">4000~7000</option>
-                                <option value="7000到10000">7000~10000</option>
-                                <option value="10000到30000">10000~30000</option>
+                                <option value="1500~4000">1500~4000</option>
+                                <option value="4000~7000">4000~7000</option>
+                                <option value="7000~10000">7000~10000</option>
+                                <option value="10000~30000">10000~30000</option>
                                 <option value="大于30000">大于30000</option>
                             </select><br></span></p>
                 </div>
@@ -137,12 +137,12 @@
             <td>${user.uname}</td>
             <td>${user.name }</td>
             <td>${user.sex }</td>
-         <td>${user.age }</td>
-         <td>${user.height }</td>
-         <td>${user.salary }</td>
-         <td>${user.address }</td>
-         <td>${user.email }</td>
-         <td>${user.phonenum }</td>
+            <td>${user.age }</td>
+            <td>${user.height }</td>
+            <td>${user.salary }</td>
+            <td>${user.address }</td>
+            <td>${user.email }</td>
+            <td>${user.phonenum }</td>
            <!--  <td class="td-status">
               <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td> -->
                <c:choose>

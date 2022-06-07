@@ -44,13 +44,13 @@ public class Searchall extends HttpServlet{
 			case "小于20":
 				res += " and age < 20";
 				break;
-			case "20到30":
+			case "20~30":
 				res += " and age >= 20 and age < 30";
 				break;
-			case "30到40":
+			case "30~40":
 				res += " and age >= 30 and age < 40";
 				break;
-			case "40到50":
+			case "40~50":
 				res += " and age >= 40 and age <= 50";
 				break;
 			case "大于50":
@@ -64,28 +64,28 @@ public class Searchall extends HttpServlet{
 			case "小于150":
 				res += " and height < 150";
 				break;
-			case "150到155":
+			case "150~155":
 				res += " and height >= 150 and height < 155";
 				break;
-			case "155到160":
+			case "155~160":
 				res += " and height >= 155 and height < 160";
 				break;
-			case "160到165":
+			case "160~165":
 				res += " and height >= 160 and height < 165";
 				break;
-			case "165到170":
+			case "165~170":
 				res += " and height >= 165 and height < 170";
 				break;
-			case "170到175":
+			case "170~175":
 				res += " and height >= 170 and height < 175";
 				break;
 			case "175到180":
 				res += " and height >= 175 and height < 180";
 				break;
-			case "180到185":
+			case "180~185":
 				res += " and height >= 180 and height < 185";
 				break;
-			case "185到190":
+			case "185~190":
 				res += " and height >= 185 and height <= 190";
 				break;
 			case "大于190":
@@ -99,26 +99,27 @@ public class Searchall extends HttpServlet{
 			case "小于1500":
 				res += " and salary < 1500";
 				break;
-			case "1500到4000":
+			case "1500~4000":
 				res += " and salary >= 1500 and salary < 4000";
 				break;
-			case "4000到7000":
+			case "4000~7000":
 				res += " and salary >= 4000 and salary < 7000";
 				break;
-			case "7000到10000":
+			case "7000~10000":
 				res += " and salary >= 7000 and salary < 10000";
 				break;
-			case "10000到30000":
+			case "10000~30000":
 				res += " and salary >= 10000 and salary <= 30000";
 				break;
 			case "大于30000":
 				res += " and salary > 30000";
 				break;
 		}
+		res += " and UName != '" + request.getSession().getAttribute("uname") + "'";
 		System.out.println(res);
 		UserDao ud = new UserDaoImpl();
 		List<User> userAll = ud.getUserAll(res);
-		int count = ud.count();
+		int count = userAll.size();
 		request.setAttribute("userAll", userAll);
 		request.setAttribute("count", count);
 		request.getRequestDispatcher("/page/query/query.jsp").forward(request, response);
