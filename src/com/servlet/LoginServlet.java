@@ -3,7 +3,9 @@ package com.servlet;
 
 import com.dao.UserDao;
 import com.dao.impl.UserDaoImpl;
-
+import com.entity.Mail;
+import com.dao.MailDao;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -36,7 +38,12 @@ public class LoginServlet extends HttpServlet {  //需要继承HttpServlet  并�
 			request.getSession().setAttribute("idnum", res.getIdnum());
 			request.getSession().setAttribute("salary", res.getSalary());
 			request.getSession().setAttribute("address", res.getAddress());
-
+			MailDao md = new MailDao();
+			String a = " Address = '" + res.getEmail() + "'";
+			List<Mail> recive = md.getMail("recivemail", a, "sender");
+			List<Mail> send = md.getMail("sendmail", a, "reciver");
+			request.getSession().setAttribute("recive", recive);
+			request.getSession().setAttribute("send", send);
 			request.getRequestDispatcher("/page/indexcustomer.jsp").forward(request, response);//转发到成功页面
 		}else{
 			response.sendRedirect("index.jsp"); //重定向到首页
