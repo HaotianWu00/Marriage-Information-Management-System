@@ -14,6 +14,12 @@
 
     <link rel="stylesheet" href="${ctx}/public/css/xadmin.css">
     <link rel="stylesheet" href="${ctx}/public/css/register.css">
+    <link rel="stylesheet" href="${ctx}/public/css/font.css">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="${ctx}/public/js/jquery-3.5.1.js"></script>
+    <script src="${ctx}/public/lib/layui/layui.js" charset="UTF-8"></script>
+    <script src="${ctx}/public/lib/layui/lay/modules/form.js" charset="UTF-8"> </script>
+    <script type="text/javascript" src="${ctx}/public/js/xadmin.js" charset="UTF-8"></script>
     <script>
 
 
@@ -25,15 +31,14 @@
             //jquery应用
             // 使用#：根据标签的id获得对象  使用.:根据class获得输入的获得对象
 
-            var name=$("#name").val();
-            var pwd=$("#pwd").val();
-            var sex=$("#sex").val();
-            var home=$("#home").val();
-            var info=$("#info").val();
+            var uname=$("#uname").val();
+            var email=$("#email").val();
+            var phonenum=$(".phonenum").val();
+            var pswd=$(".pswd").val();
 
             var aaaa = true;
-            if(name=="" || pwd==""){
-                alert("用户名和密码不能为空");
+            if( email == "" || uname == "" || pswd == "" ||phonenum == ""){
+                alert("必填项不能为空");
                 aaaa=false;
             }
 
@@ -41,19 +46,16 @@
                 // document.frm.submit();
                 $.ajax({
                     type:"post",
-                    url:"${cvb}/CheckServlet",
+                    url:"${ctx}/CheckServlet",
                     data:{
-                        name:name,
-                        pwd:pwd,
-                        sex:sex,
-                        home:home,
-                        info:info
+                        uname:uname,
+                        email:email,
                     },
                     success:function (data) {
                         if (data == "true") {
-                            alert("用户已经存在 请重新注册");
+                            alert("用户已经存在或邮箱已绑定，请重新注册");
                         } else {
-                            setTimeout("document.frm.submit();", 2000)
+                            setTimeout("document.frm.submit();", 100)
                         }
                     },
                     error:function (){
@@ -102,26 +104,26 @@
     <div  id="box">
 
 
-        <form method="get" class="layui-form" action="${ctx}/RegistServlet">
+        <form name="frm" method="get" class="layui-form" action="${ctx}/RegistServlet">
             <br><br><br><br>
             <div class="outer-box">
                 <label for="exampleFormControlInput1">用户名:&nbsp&nbsp&nbsp</label>
-                <input  class="form-control username" name="uname" id="exampleFormControlInput1" autocomplete="off" >
+                <input  class="form-control username" id="uname" name="uname"  class="layui-input" id="exampleFormControlInput1" autocomplete="off" >
             </div>
             <div class="outer-box">
                 <label for="exampleFormControlInput2">密码:&nbsp&nbsp&nbsp</label>
-                <input  class="form-control username" name="pswd" id="exampleFormControlInput2" autocomplete="off" >
+                <input  class="form-control username pswd" name="pswd" id="exampleFormControlInput2" id="pswd" autocomplete="off" >
             </div>
             <div class="outer-box">
                 <label for="exampleFormControlInput3">绑定邮箱:&nbsp&nbsp&nbsp</label>
-                <input type="email" class="form-control username" name="email" id="exampleFormControlInput3" autocomplete="off" >
+                <input type="email" class="form-control username" id="email"  name="email" id="exampleFormControlInput3" autocomplete="off" >
             </div>
             <div class="outer-box">
                 <label for="exampleFormControlInput4">绑定手机:&nbsp&nbsp&nbsp</label>
-                <input  class="form-control username" name="phonenum" id="exampleFormControlInput4" autocomplete="off" >
+                <input  class="form-control username phonenum" name="phonenum" id="exampleFormControlInput4" id="phonenum" autocomplete="off" >
             </div>
 
-            <input  class="button" type="submit" value="提交注册" onclick="checkFields()">
+            <input  class="button" type="button" value="提交注册" onclick="checkFields()">
 
         </form>
 

@@ -13,4 +13,6 @@ public interface UserDao {
 	 boolean update(String uname, String pswd,String phonenum, String email,String name, String sex,String age, String height,String idnum, String salary, String address) ;//更新用户信息
 	 int count();
 	boolean queryUserByName(String name);
+	int ifEmailExist(String email);
+	int ifUserExist(String uname);
 }

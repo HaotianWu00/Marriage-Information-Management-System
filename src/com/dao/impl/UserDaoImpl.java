@@ -136,5 +136,38 @@ public class UserDaoImpl implements UserDao{
 		}
 		return b;
 	}
-    
+
+	public int ifUserExist(String uname){
+		int i = 0;
+		try {
+			DBconn.init();
+			ResultSet rs = DBconn.selectSql("select * from user Where UName = '" + uname + "'");
+			while(rs.next()){
+				i++;
+			}
+			DBconn.closeConn();
+			return i;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return i;
+	}
+
+	public int ifEmailExist(String email){
+		int i = 0;
+		try {
+			DBconn.init();
+			ResultSet rs = DBconn.selectSql("select * from user Where Email = '" + email + "'");
+			while(rs.next()){
+				i++;
+			}
+			DBconn.closeConn();
+			return i;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return i;
+	}
+
+
 }

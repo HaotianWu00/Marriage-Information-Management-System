@@ -54,7 +54,7 @@
             </tr>
             <tr>
                 <td>绑定邮箱：</td>
-                <td><input type="text" value="${sessionScope.email}" name="email" autocomplete="off"></td>
+                <td><div>${sessionScope.email}</div></td>
             </tr>
             <tr>
                 <td>绑定手机号码：</td>
