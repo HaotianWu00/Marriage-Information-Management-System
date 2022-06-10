@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="${ctx}/public/css/xadmin.css">
     <link rel="stylesheet" href="${ctx}/public/css/register.css">
     <script>
+
+
         function checkFields() {
             //DOM应用
             // var age=document.frm.age.value;//获得名称为age的input标签对象  获得名为age对象的值

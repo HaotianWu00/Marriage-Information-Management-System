@@ -22,21 +22,21 @@
 </head>
 <body>
     <!-- 顶部开始 -->
-    <div class="container" style="background-color: #248CF5">
-        <div class="logo"><a href="./index.html">人事管理系统</a></div>
+    <div class="container" style="background-color: #F283AF">
+        <div class="logo"><a href="./index.html">婚恋信息系统</a></div>
         <div class="left_open">
             <i title="展开左侧栏" class="iconfont">&#xe699;</i>
         </div>
         
-        <ul class="layui-nav right" lay-filter="">
+        <ul style="background-color: #F283AF" class="layui-nav right" lay-filter="">
           <li class="layui-nav-item">
-            <a href="javascript:;">尊敬的：${sessionScope.name }</a>
+            <a style="background-color: #F283AF" href="javascript:;">尊敬的：${sessionScope.name }</a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
               <dd><a onclick="x_admin_show('个人信息','${ctx }/page/user/information.jsp')">个人信息</a></dd>
               <dd><a href="${ctx}/index.jsp">退出</a></dd>
             </dl>
           </li>
-          <li class="layui-nav-item to-index"><a>欢迎登录</a></li>
+            <li class="layui-nav-item to-index"><a>欢迎登录</a></li>
         </ul>
         
     </div>
@@ -120,8 +120,8 @@
     <!-- 右侧主体结束 -->
     <!-- 中部结束 -->
     <!-- 底部开始 -->
-    <div class="footer" style="background-color: #248CF5" >
-        <div class="copyright">成都六人组有限公司</div>
+    <div class="footer" style="background-color: #F283AF" >
+        <div class="copyright">龙爱婚恋网</div>
     </div>
     <!-- 底部结束 -->
  

@@ -13,7 +13,7 @@ public class MailDao {
         List<Mail> res = new ArrayList<>();
         try {
             DBconn.init();
-            ResultSet rs = DBconn.selectSql("select * from " + aim + " Where" + situ);
+            ResultSet rs = DBconn.selectSql("select * from " + aim + " Where" + situ + " order by Time DESC");
             while(rs.next()){
                 Mail mail = new Mail( res.size() + 1,rs.getString("Time"), rs.getString("Address"),
                                       rs.getString(owner) ,rs.getString("Title"), rs.getString("Mail"));

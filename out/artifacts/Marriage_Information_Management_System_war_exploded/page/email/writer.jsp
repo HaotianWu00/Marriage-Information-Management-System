@@ -5,8 +5,11 @@
 <html>
 <head>
     <style>
+        body{
+            background-color: #C4C4C4;
+        }
         div.outer{
-            background-color: #F283AF;
+            background-color: #F5ADC9;
             width: 50%;
             margin-left: 25%;
             height: 400px;
@@ -68,7 +71,7 @@
         </div>
         <div class="mail">
 
-            <textarea name="mail" rows="10" cols="30" placeholder="请输入个人信息" id="exampleFormControlInput3"></textarea>
+            <textarea name="mail" rows="10" cols="30" placeholder="请编写邮件" id="exampleFormControlInput3"></textarea>
         </div>
         <input value="发送" lay-submit lay-filter="login" class="ok" type="submit"  >
     </form>

@@ -13,9 +13,10 @@
 		<link rel="shortcut icon" href="${ctx}/public/logo.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="${ctx}/public/css/font.css">
 		<link rel="stylesheet" href="${ctx}/public/css/xadmin.css">
-		<script type="text/javascript" src="${ctx}/public/js/jquery-3.5.1.js"></script>
-		<script src="${ctx}/public/lib/layui/layui.js" charset="utf-8"></script>
-		<script type="text/javascript" src="${ctx}/public/js/xadmin.js"></script>
+		<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+		<script src="${ctx}/public/lib/layui/layui.js" charset="UTF-8"></script>
+		<script src="${ctx}/public/lib/layui/lay/modules/form.js" charset="UTF-8"> </script>
+		<script type="text/javascript" src="${ctx}/public/js/xadmin.js" charset="UTF-8"></script>
 		<style>
 			body#aca{
 				background-image:url(./public/images/login.png) ;
@@ -50,7 +51,7 @@
 
 				<select class="layui-input" name="tip" >
 					<option value="1">管理员</option>
-					<option value="2">用户</option>
+					<option value="2" selected>用户</option>
 				</select>
 				<br>
 				<input value="登录" lay-submit lay-filter="login" style="width:100%;" type="submit"  >

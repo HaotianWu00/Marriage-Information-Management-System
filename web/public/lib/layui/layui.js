@@ -8,6 +8,7 @@
             for (var e, n = t.scripts, o = n.length - 1, r = o; r > 0; r--) if ("interactive" === n[r].readyState) {
                 e = n[r].src;
                 break
+
             }
             return e || n[o].src
         }();
@@ -168,6 +169,7 @@
             t.stopPropagation()
         } catch (n) {
             t.cancelBubble = !0
+
         }
     }, o.prototype.onevent = function (e, t, n) {
         return "string" != typeof e || "function" != typeof n ? this : o.event(e, t, null, n)

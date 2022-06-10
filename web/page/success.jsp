@@ -19,16 +19,13 @@
 
     <style>
 
-        strong{
-            border-radius: 1rem;
-            background-color: #5C5C5C;
-            color: white;
+        div.register-uper{
+            height: 130px;
         }
-        strong.step3{
-            background-color: red;
-            text-align: center;
-            color: white;
+        .register-uperleft, .register-uperright{
+            height: 100%;
         }
+
         div.success{
             float: left;
             height: 150px;
@@ -36,16 +33,7 @@
             font-size: 300%;
             text-align: center;
         }
-        a{
-            float: left;
-            width: 20%;
-            margin-left: 40%;
-            height: 30px;
-            background-color: wheat;
-            text-align: center;
-            vertical-align: bottom;
-            font-size: 150%;
-        }
+
     </style>
 <body>
 <div class="register-uper clearfix">
@@ -57,20 +45,16 @@
         <br>
         <div>龙爱网，打造中国最真诚婚恋平台</div>
     </div>
-    <div class="register-bottom">
-        <br>
-        <span><strong>&nbsp1&nbsp</strong></span><span>&nbsp账号信息&nbsp&nbsp&nbsp&nbsp</span>
-        <span><strong>&nbsp2&nbsp</strong></span><span>&nbsp基本资料&nbsp&nbsp&nbsp&nbsp</span>
-        <span><strong class="step3">&nbsp3&nbsp</strong></span><span>&nbsp注册完成</span>
-    </div>
+
 </div>
 
 <div class="register-form">
-    <div  id="box">
+    <br>
+    <div  id="box" style="background-color: #F5ADC9">
 
 
         <form method="post" class="layui-form" action="${ctx}/RegisterServlet2">
-            <br> <br> <br> <br>
+            <br> <br> <br> <br><br><br><br><br>
             <div class="success">登录成功！</div>
 
 

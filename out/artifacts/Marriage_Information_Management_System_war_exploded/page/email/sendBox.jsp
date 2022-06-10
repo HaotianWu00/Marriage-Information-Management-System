@@ -76,7 +76,7 @@
             <th>发送时间</th>
             <th>收件人</th>
             <th>主题</th>
-
+            <th></th>
             <!-- <th>状态</th> -->
 
         </thead>
@@ -94,7 +94,7 @@
                     <td><input name="b" type="submit" value="${mail.owner}"></td>
 
                     <td><input name="c" type="submit" value="${mail.title}"></td>
-
+                    <td><a href="${ctx}/DeleteSendServlet?time=${mail.time}">删除</a></td>
 
 
                 </tr>
