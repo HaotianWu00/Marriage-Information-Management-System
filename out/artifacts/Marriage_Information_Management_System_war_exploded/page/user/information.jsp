@@ -17,59 +17,96 @@
     <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="${ctx}/public/lib/layui/layui.js" charset="utf-8"></script>
     <script type="text/javascript" src="${ctx}/public/js/xadmin.js"></script>
+    <style>
+        div.outer{
+            height: 350px;
+
+            width: 60%;
+            margin-left: 20%;
+            background-color: #FAE3AF;
+            padding-top: 20px;
+        }
+        table{
+            height: 300px;
+            width: 80%;
+            margin-left: 10%;
+
+        }
+        input{
+            width: 20%;
+            margin-left: 40%;
+        }
+
+    </style>
+
 </head>
 <body>
-<form method="get" class="layui-form" action="${ctx}/UpdateServlet">
-<table>
-    <tr>
-        <td>用户名：</td>
-        <td>${sessionScope.uname}</td>
-    </tr>
-    <tr>
-        <td>密码：</td>
-        <td>${sessionScope.pswd}</td>
-    </tr>
-    <tr>
-        <td>绑定邮箱：</td>
-        <td>${sessionScope.email}</td>
-    </tr>
-    <tr>
-         <td>绑定手机号码：</td>
-        <td>${sessionScope.phonenum}</td>
-    </tr>
-    <tr>
-        <td>姓名：</td>
-        <td>${sessionScope.name}</td>
-    </tr>
-    <tr>
-        <td>性别：</td>
-        <td>${sessionScope.sex}</td>
-    </tr>
-    <tr>
-        <td>年龄：</td>
-        <td>${sessionScope.age}</td>
-    </tr>
-    <tr>
-        <td>身高：</td>
-        <td>${sessionScope.height}</td>
-    </tr>
-    <tr>
-        <td>身份证号：</td>
-        <td>${sessionScope.idnum}</td>
-    </tr>
-    <tr>
-        <td>月薪：</td>
-        <td>${sessionScope.salary}</td>
-    </tr>
-    <tr>
-        <td>住址：</td>
-        <td>${sessionScope.address}</td>
-    </tr>
+<br><br><br><br><br><br>
+<div class="outer">
+    <form method="get" class="layui-form" action="${ctx}/UpdateServlet">
+        <table>
+
+            <tr>
+                <td>用户名：</td>
+                <td>${sessionScope.uname}</td>
+            </tr>
+
+            <tr>
+                <td>密码：</td>
+                <td>${sessionScope.pswd}</td>
+            </tr>
+
+            <tr>
+                <td>绑定邮箱：</td>
+                <td>${sessionScope.email}</td>
+            </tr>
+
+            <tr>
+                <td>绑定手机号码：</td>
+                <td>${sessionScope.phonenum}</td>
+            </tr>
+
+            <tr>
+                <td>姓名：</td>
+                <td>${sessionScope.name}</td>
+            </tr>
+
+            <tr>
+                <td>性别：</td>
+                <td>${sessionScope.sex}</td>
+            </tr>
+
+            <tr>
+                <td>年龄：</td>
+                <td>${sessionScope.age}</td>
+            </tr>
+
+            <tr>
+                <td>身高：</td>
+                <td>${sessionScope.height}</td>
+            </tr>
+
+            <tr>
+                <td>身份证号：</td>
+                <td>${sessionScope.idnum}</td>
+            </tr>
+
+            <tr>
+                <td>月薪：</td>
+                <td>${sessionScope.salary}</td>
+            </tr>
+
+            <tr>
+                <td>住址：</td>
+                <td>${sessionScope.address}</td>
+            </tr>
 
 
-</table>
-    <input  class="button" type="submit" value="修改个人信息">
+        </table>
+        <br>
+        <input  class="button" type="submit" value="修改个人信息">
 
-</form>
+    </form>
+</div>
 </body>
 </html>

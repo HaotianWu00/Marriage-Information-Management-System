@@ -33,7 +33,7 @@
             <a style="background-color: #F283AF" href="javascript:;">尊敬的：${sessionScope.name }</a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
               <dd><a onclick="x_admin_show('个人信息','${ctx }/page/user/information.jsp')">个人信息</a></dd>
-              <dd><a href="${ctx}/index.jsp">退出</a></dd>
+              <dd><a href="${ctx}/LogoutServlet">退出</a></dd>
             </dl>
           </li>
             <li class="layui-nav-item to-index"><a>欢迎登录</a></li>
