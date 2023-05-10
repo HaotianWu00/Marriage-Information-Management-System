@@ -44,6 +44,7 @@
 
             if(aaaa){
                 // document.frm.submit();
+
                 $.ajax({
                     type:"post",
                     url:"${ctx}/CheckServlet",
